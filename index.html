@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LPU Campus Emergency Guide — Stay Safe, Stay Ready</title>
+<meta name="description" content="Aesthetic, animated campus emergency guide for Lovely Professional University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loader" class="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Preparing safety…</div>
+  </div>
+</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <span class="logo-mark">LPU</span>
+    <span class="logo-text">Emergency Guide</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#dial">Quick Dial</a></li>
+    <li><a href="#emergencies">Emergencies</a></li>
+    <li><a href="#procedures">Procedures</a></li>
+    <li><a href="#firstaid">First Aid</a></li>
+    <li><a href="#safety">Safety Tips</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <a href="tel:112" class="nav-cta">Call 112</a>
+</nav>
+<header class="hero" id="hero">
+  <canvas id="particles" class="particles"></canvas>
+  <div class="hero-gradient"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-reveal><span class="badge-dot"></span>Lovely Professional University · Campus Safety</div>
+    <h1 class="hero-title" data-reveal><span class="line">When seconds</span><span class="line accent">matter most.</span></h1>
+    <p class="hero-sub" data-reveal>Your aesthetic, animated campus emergency companion — contacts, procedures, first aid and safety protocols for every LPU student, faculty and staff.</p>
+    <div class="hero-actions" data-reveal>
+      <a href="#dial" class="btn btn-primary"><span>Emergency Contacts</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#emergencies" class="btn btn-ghost">Browse Emergencies</a>
+    </div>
+    <div class="hero-stats" data-reveal>
+      <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-label">/7 Response</span></div>
+      <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Emergency Types</span></div>
+      <div class="stat"><span class="stat-num" data-count="100">0</span><span class="stat-label">% Prepared</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</header>
+
+<section class="section dial" id="dial">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">01 · Quick Dial</span>
+      <h2>One tap. <span class="accent">One call.</span> Help on the way.</h2>
+      <p>Tap any card to call directly. Save these numbers in your phone today.</p>
+    </div>
+    <div class="dial-grid">
+      <a class="dial-card dial-emergency" href="tel:112" data-reveal data-tilt>
+        <div class="dial-icon">🚨</div>
+        <div class="dial-info"><span class="dial-name">National Emergency</span><span class="dial-num">112</span><span class="dial-desc">Police · Ambulance · Fire · Disaster</span></div>
+        <div class="dial-pulse"></div>
+      </a>
+      <a class="dial-card" href="tel:100" data-reveal data-tilt>
+        <div class="dial-icon">👮</div>
+        <div class="dial-info"><span class="dial-name">Police</span><span class="dial-num">100</span><span class="dial-desc">Law & order, threats, crime</span></div>
+      </a>
+      <a class="dial-card" href="tel:108" data-reveal data-tilt>
+        <div class="dial-icon">🚑</div>
+        <div class="dial-info"><span class="dial-name">Ambulance</span><span class="dial-num">108</span><span class="dial-desc">Medical emergencies, accidents</span></div>
+      </a>
+      <a class="dial-card" href="tel:101" data-reveal data-tilt>
+        <div class="dial-icon">🚒</div>
+        <div class="dial-info"><span class="dial-name">Fire Brigade</span><span class="dial-num">101</span><span class="dial-desc">Fire, gas leak, rescue</span></div>
+      </a>
+      <a class="dial-card" href="tel:1091" data-reveal data-tilt>
+        <div class="dial-icon">👩</div>
+        <div class="dial-info"><span class="dial-name">Women Helpline</span><span class="dial-num">1091</span><span class="dial-desc">Women in distress</span></div>
+      </a>
+      <a class="dial-card" href="tel:1078" data-reveal data-tilt>
+        <div class="dial-icon">🌪️</div>
+        <div class="dial-info"><span class="dial-name">Disaster Mgmt</span><span class="dial-num">1078</span><span class="dial-desc">Natural disasters, relief</span></div>
+      </a>
+      <a class="dial-card dial-campus" href="tel:+911824404404" data-reveal data-tilt>
+        <div class="dial-icon">🛡️</div>
+        <div class="dial-info"><span class="dial-name">LPU Campus Security</span><span class="dial-num">+91 1824 404404</span><span class="dial-desc">24/7 campus patrol & control room</span></div>
+      </a>
+      <a class="dial-card dial-campus" href="tel:+911824404404" data-reveal data-tilt>
+        <div class="dial-icon">🏥</div>
+        <div class="dial-info"><span class="dial-name">LPU Medical Centre</span><span class="dial-num">+91 1824 404404</span><span class="dial-desc">On-campus health centre & first aid</span></div>
+      </a>
+    </div>
+    <p class="note" data-reveal>⚠️ Numbers are indicative. Always verify current LPU control-room numbers on your ID card / student portal.</p>
+  </div>
+</section>
+<section class="section emergencies" id="emergencies">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">02 · Emergency Types</span>
+      <h2>Know the <span class="accent">threat.</span> Know the move.</h2>
+      <p>Tap a card to reveal the immediate action checklist.</p>
+    </div>
+    <div class="em-grid">
+      <article class="em-card" data-reveal data-tilt data-em="fire">
+        <div class="em-bg"></div>
+        <div class="em-icon">🔥</div>
+        <h3>Fire</h3>
+        <p>Smoke, flames, burning smell</p>
+        <ul class="em-check"><li>Pull nearest fire alarm</li><li>Evacuate via stairs — never elevators</li><li>Stay low under smoke</li><li>Call 101 & campus security</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+      <article class="em-card" data-reveal data-tilt data-em="quake">
+        <div class="em-bg"></div>
+        <div class="em-icon">🌍</div>
+        <h3>Earthquake</h3>
+        <p>Shaking, tremors, ground movement</p>
+        <ul class="em-check"><li>Drop, Cover, Hold On</li><li>Stay away from windows</li><li>Evacuate after shaking stops</li><li>Assemble at safe zones</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+      <article class="em-card" data-reveal data-tilt data-em="medical">
+        <div class="em-bg"></div>
+        <div class="em-icon">❤️</div>
+        <h3>Medical Emergency</h3>
+        <p>Unconscious, bleeding, chest pain</p>
+        <ul class="em-check"><li>Call 108 / campus medical</li><li>Check breathing & pulse</li><li>Control bleeding with pressure</li><li>Do not move injured person</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+      <article class="em-card" data-reveal data-tilt data-em="flood">
+        <div class="em-bg"></div>
+        <div class="em-icon">🌊</div>
+        <h3>Flood / Waterlogging</h3>
+        <p>Heavy rain, rising water</p>
+        <ul class="em-check"><li>Move to higher ground</li><li>Avoid electrical equipment</li><li>Do not walk through flowing water</li><li>Switch off mains if safe</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+      <article class="em-card" data-reveal data-tilt data-em="threat">
+        <div class="em-bg"></div>
+        <div class="em-icon">⚠️</div>
+        <h3>Threat / Violence</h3>
+        <p>Active threat, suspicious activity</p>
+        <ul class="em-check"><li>Run — evacuate if safe</li><li>Hide — lock & barricade</li><li>Fight — last resort</li><li>Call 100 / security silently</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+      <article class="em-card" data-reveal data-tilt data-em="power">
+        <div class="em-bg"></div>
+        <div class="em-icon">⚡</div>
+        <h3>Power Outage</h3>
+        <p>Sudden blackout, no electricity</p>
+        <ul class="em-check"><li>Stay calm, use flashlight</li><li>Unplug sensitive devices</li><li>Use stairs, not elevators</li><li>Report to maintenance</li></ul>
+        <span class="em-more">View full procedure →</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section procedures" id="procedures">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">03 · Step-by-Step</span>
+      <h2>Detailed <span class="accent">procedures.</span></h2>
+      <p>Expand each section for the complete protocol.</p>
+    </div>
+    <div class="accordion" id="accordion">
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">01</span><span class="acc-title">🔥 Fire Evacuation Protocol</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>Alert:</strong> Pull nearest fire alarm and shout "FIRE".</li><li><strong>Assess:</strong> Small fire + trained? Use extinguisher (PASS). Else evacuate.</li><li><strong>Evacuate:</strong> Stairwells only. Never elevators. Stay low under smoke.</li><li><strong>Do not:</strong> Re-enter. No water on electrical/grease fires.</li><li><strong>Assembly:</strong> Proceed to assembly point. Report to warden.</li><li><strong>Call:</strong> 101 (Fire) and LPU Campus Security.</li></ol></div>
+      </div>
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">02</span><span class="acc-title">🌍 Earthquake Response</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>During shaking:</strong> Drop, Cover, Hold On. Away from windows.</li><li><strong>Outdoors:</strong> Open area, away from buildings/power lines.</li><li><strong>Driving:</strong> Pull over, stop, parking brake. Avoid bridges.</li><li><strong>After:</strong> Evacuate calmly. Expect aftershocks. No elevators.</li><li><strong>Check:</strong> Injuries. Provide first aid.</li><li><strong>Do not:</strong> Candles/matches (gas). No elevators.</li></ol></div>
+      </div>
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">03</span><span class="acc-title">❤️ Medical Emergency Response</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>Scene safety:</strong> Ensure safe area.</li><li><strong>Call:</strong> 108 / LPU Medical Centre. Give location & details.</li><li><strong>Responsiveness:</strong> Tap shoulder, ask "Are you okay?"</li><li><strong>Breathing:</strong> If not breathing, CPR (30:2).</li><li><strong>Bleeding:</strong> Firm direct pressure. Don't remove embedded objects.</li><li><strong>Do not:</strong> Food/water to unconscious. Don't move if spinal injury.</li></ol></div>
+      </div>
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">04</span><span class="acc-title">🌊 Flood & Waterlogging</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>Move up:</strong> Higher floors/ground. Avoid basements.</li><li><strong>Electricity:</strong> Switch off mains if safe.</li><li><strong>Avoid:</strong> Walking/driving through floodwater.</li><li><strong>Water safety:</strong> No tap water until cleared.</li><li><strong>Report:</strong> Hostel warden & maintenance.</li></ol></div>
+      </div>
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">05</span><span class="acc-title">⚠️ Active Threat (Run-Hide-Fight)</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>Run:</strong> Clear path? Evacuate. Leave belongings.</li><li><strong>Hide:</strong> Lock/barricade, silence phone, stay hidden.</li><li><strong>Fight:</strong> Last resort — improvise, commit.</li><li><strong>When safe:</strong> Call 100 / security. Give location.</li><li><strong>Do not:</strong> Pull fire alarm. Don't confront.</li></ol></div>
+      </div>
+      <div class="acc-item" data-reveal>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">06</span><span class="acc-title">⚡ Power Outage Protocol</span><span class="acc-icon">+</span></button>
+        <div class="acc-body"><ol><li><strong>Stay calm:</strong> Phone flashlight. No candles.</li><li><strong>Unplug:</strong> Sensitive electronics.</li><li><strong>Elevators:</strong> Don't use. If stuck, press alarm.</li><li><strong>Report:</strong> Maintenance / warden.</li><li><strong>Food:</strong> Keep fridge closed (~4 hrs safe).</li></ol></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section firstaid" id="firstaid">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">04 · First Aid Quick Reference</span>
+      <h2>Be the <span class="accent">first responder.</span></h2>
+      <p>Basic techniques everyone should know. Not a substitute for professional care.</p>
+    </div>
+    <div class="fa-grid">
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🫁</div><h3>CPR (Adult)</h3><p>30 compressions (2 in deep) then 2 breaths. Rate 100-120/min.</p></div>
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🩸</div><h3>Severe Bleeding</h3><p>Firm direct pressure. Pack wound. Tourniquet last resort. Call 108.</p></div>
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🔥</div><h3>Burns</h3><p>Cool with running water 10-20 min. No ice/ointments. Sterile dressing.</p></div>
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🫁</div><h3>Choking</h3><p>5 back blows + 5 abdominal thrusts. Alternate until expelled/unconscious.</p></div>
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🐍</div><h3>Snake / Insect Bite</h3><p>Immobilize limb below heart. Don't cut/suck. Note snake. Rush to hospital.</p></div>
+      <div class="fa-card" data-reveal data-tilt><div class="fa-icon">🧠</div><h3>Fainting</h3><p>Lay flat, elevate legs. Loosen clothing. Check breathing. Call if >1 min.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section safety" id="safety">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">05 · Safety Tips</span>
+      <h2>Do's & <span class="accent">Don'ts.</span></h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tips-col do" data-reveal><h3>✅ Do</h3><ul><li>Know your nearest exit & assembly point</li><li>Save emergency numbers</li><li>Keep first-aid kit & flashlight</li><li>Report hazards immediately</li><li>Follow warden instructions</li><li>Keep exits clear</li></ul></div>
+      <div class="tips-col dont" data-reveal><h3>❌ Don't</h3><ul><li>Use elevators in emergencies</li><li>Spread rumors/panic</li><li>Block exits</li><li>Ignore fire drills</li><li>Handle hazards yourself</li><li>Re-enter until cleared</li></ul></div>
+    </div>
+  </div>
+</section>
+<section class="section resources" id="resources">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">06 · Campus Resources</span>
+      <h2>LPU <span class="accent">support network.</span></h2>
+    </div>
+    <div class="res-grid">
+      <div class="res-card" data-reveal><h4>🛡️ Campus Security</h4><p>24/7 patrol, CCTV, lost & found, gate passes.</p></div>
+      <div class="res-card" data-reveal><h4>🏥 Health Centre</h4><p>OPD, emergency care, ambulance, pharmacy, mental health.</p></div>
+      <div class="res-card" data-reveal><h4>🏠 Hostel Wardens</h4><p>Block-wise wardens available 24/7.</p></div>
+      <div class="res-card" data-reveal><h4>🧠 Counselling</h4><p>Mental health support, crisis counselling.</p></div>
+      <div class="res-card" data-reveal><h4>🚒 Fire Safety Team</h4><p>Fire marshals, extinguisher maintenance, drills.</p></div>
+      <div class="res-card" data-reveal><h4>📡 Disaster Cell</h4><p>Preparedness, drills, evacuation planning.</p></div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><span class="logo-mark">LPU</span><span>Campus Emergency Guide</span></div>
+      <p>Stay safe. Stay prepared. Stay connected.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LPU Campus Safety Initiative · Static informational site</span>
+      <span>Built with care for every Lovelyite 💙</span>
+    </div>
+  </div>
+</footer>
+<button class="backtop" id="backtop" aria-label="Back to top">↑</button>
+<script src="js/main.js"></script>
+</body>
+</html>
+
